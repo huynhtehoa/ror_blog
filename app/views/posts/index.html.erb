@@ -1,6 +1,7 @@
 <h1>ROR Blog</h1>
 <% @posts.each do |post| %>
-  <h1><%= post.title %></h1>
-  <p><%= post.body %></p>
+  <h3><%= link_to post.title, post_path(post) %></h3>
+  <p><%= @markdown.render(post.body).html_safe %></p>
+  <p><%= time_ago_in_words(post.created_at)  %></p>
   <hr/>
 <% end %>

@@ -1,0 +1,12 @@
+<h3>Edit Post</h3>
+<%= form_for(@post) do |f| %>
+  <div class="fields">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="fields">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+  <%= f.submit %>
+<% end %>
